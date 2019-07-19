@@ -1,0 +1,12 @@
+language: groovy
+
+script:
+  - echo 'skip'
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: echo 'deploying release!'
+    on:
+      branch:
+        - /feature\/.+/
