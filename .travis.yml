@@ -9,5 +9,4 @@ deploy:
     script: echo 'deploying release!'
     on:
       branch:
-        - feature/test
-        - /^feature.*$/
+        - /feature\/.+/
