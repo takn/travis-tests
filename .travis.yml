@@ -6,10 +6,10 @@ script:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: echo 'deploying feature!'
+    script: echo 'deploying feature! or master!!!'
     on:
       all_branches: true
-      condition: ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} =~ ^feature\/.*$
+      condition: ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} =~ ^feature\/.*$ OR ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} =~ master
   - provider: script
     skip_cleanup: true
     script: echo 'deploying release!!!'
